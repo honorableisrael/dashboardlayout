@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { CSSTransition } from "react-transition-group";
 
 function DropdownNotification() {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,6 +7,8 @@ function DropdownNotification() {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const nodeRef = useRef(null);
 
   return (
     <div>
@@ -28,97 +31,115 @@ function DropdownNotification() {
           <circle cx="23.9996" cy="8" r="4" fill="#11A811" />
         </svg>
       </span>
-
-      {isOpen && (
-        <div
-          id="dropdown"
-          className={`absolute z-10 border border-[#E7E9FB] mt-2 bg-white divide-y right-[0px] sm:right-[17rem] divide-gray-100 rounded-lg shadow sm:w-[330px] md:w-[400px]`}
-        >
-          <ul
-            className="py-2 text-sm text-[#101828]"
-            aria-labelledby="dropdownDefaultButton"
-          >
-            <li className="flex items-center justify-between p-2 py-3 pb-5">
-              <span className="flex text-[20px] text-[#101828] items-center block px-5 ">
-                Notifications
-              </span>
-              <span className="flex items-center justify-between text-[#667085] pr-4">
-                <span className="font-[400]">Unread only</span>
-                <label className="inline-flex items-center ml-2 cursor-pointer">
-                  <input type="checkbox" value="" className="sr-only peer" />
-                  <div className="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:gray-200 peer-focus:gray-200 dark:peer-focus:ri rounded-full peer dark:bg-gray-200 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-200 peer-checked:bg-gray-200"></div>
-                </label>
-              </span>
-            </li>
-            <hr className="px-2" />
-            <li className="flex items-center p-5">
-              <svg
-                width="8"
-                height="8"
-                viewBox="0 0 8 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+      <CSSTransition
+        in={isOpen}
+        nodeRef={nodeRef}
+        classNames="alert"
+        unmountOnExit
+        timeout={{
+          appear: 500,
+          enter: 300,
+          exit: 500,
+        }}
+      >
+        <>
+          {isOpen && (
+            <div
+              ref={nodeRef}
+              id="dropdown"
+              className={`absolute z-10 border border-[#E7E9FB] mt-2 bg-white divide-y right-[0px] sm:right-[17rem] divide-gray-100 rounded-lg shadow sm:w-[330px] md:w-[400px]`}
+            >
+              <ul
+                className="py-2 text-sm text-[#101828]"
+                aria-labelledby="dropdownDefaultButton"
               >
-                <rect
-                  y="0.000244141"
-                  width="8"
-                  height="8"
-                  rx="4"
-                  fill="#11A811"
-                />
-              </svg>
-              <div className="px-6">
-                <div className="flex items-center block py-2 ">
-                  S&B Inc. signed the lender’s agreement
-                </div>
-                <div className="text-[#667085]">Just now</div>
-              </div>
-            </li>
-            <hr className="px-2" />
-            <li className="flex items-center p-5">
-              <svg
-                width="8"
-                height="8"
-                viewBox="0 0 8 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  y="0.000244141"
-                  width="8"
-                  height="8"
-                  rx="4"
-                  fill="#11A811"
-                />
-              </svg>
-              <div className="px-6">
-                <div className="flex items-center block py-2 ">
-                  S&B Inc. signed the lender’s agreement
-                </div>
-                <div className="text-[#667085]">04:27 pm</div>
-              </div>
-            </li>
-            <hr />
-            <li className="flex items-center p-5">
-              <div className="px-6 text-[#667085]">
-                <div className="flex items-center block py-2 ">
-                You received $20 from Bass Industries
-                </div>
-                <div className="text-[#667085]">Yesterday</div>
-              </div>
-            </li>
-            <hr />
-            <li className="flex items-center p-5">
-              <div className="px-6 text-[#667085]">
-                <div className="flex items-center block py-2 ">
-                Archibald Holdings completed payment for Invoice #46
-                </div>
-                <div className="text-[#667085]">09/02/2024</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      )}
+                <li className="flex items-center justify-between p-2 py-3 pb-5">
+                  <span className="flex text-[20px] text-[#101828] items-center block px-5 ">
+                    Notifications
+                  </span>
+                  <span className="flex items-center justify-between text-[#667085] pr-4">
+                    <span className="font-[400]">Unread only</span>
+                    <label className="inline-flex items-center ml-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        value=""
+                        className="sr-only peer"
+                      />
+                      <div className="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:gray-200 peer-focus:gray-200 dark:peer-focus:ri rounded-full peer dark:bg-gray-200 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-200 peer-checked:bg-gray-200"></div>
+                    </label>
+                  </span>
+                </li>
+                <hr className="px-2" />
+                <li className="flex items-center p-5">
+                  <svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.000244141"
+                      width="8"
+                      height="8"
+                      rx="4"
+                      fill="#11A811"
+                    />
+                  </svg>
+                  <div className="px-6">
+                    <div className="flex items-center block py-2 ">
+                      S&B Inc. signed the lender’s agreement
+                    </div>
+                    <div className="text-[#667085]">Just now</div>
+                  </div>
+                </li>
+                <hr className="px-2" />
+                <li className="flex items-center p-5">
+                  <svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      y="0.000244141"
+                      width="8"
+                      height="8"
+                      rx="4"
+                      fill="#11A811"
+                    />
+                  </svg>
+                  <div className="px-6">
+                    <div className="flex items-center block py-2 ">
+                      S&B Inc. signed the lender’s agreement
+                    </div>
+                    <div className="text-[#667085]">04:27 pm</div>
+                  </div>
+                </li>
+                <hr />
+                <li className="flex items-center p-5">
+                  <div className="px-6 text-[#667085]">
+                    <div className="flex items-center block py-2 ">
+                      You received $20 from Bass Industries
+                    </div>
+                    <div className="text-[#667085]">Yesterday</div>
+                  </div>
+                </li>
+                <hr />
+                <li className="flex items-center p-5">
+                  <div className="px-6 text-[#667085]">
+                    <div className="flex items-center block py-2 ">
+                      Archibald Holdings completed payment for Invoice #46
+                    </div>
+                    <div className="text-[#667085]">09/02/2024</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          )}
+        </>
+      </CSSTransition>
     </div>
   );
 }

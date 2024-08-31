@@ -108,7 +108,7 @@ const DashboardNav = ({ showNav, setShowNav }: DashboardNavProps) => {
                     <div className="px-6 mb-8 text-right cursor-pointer">
                       Flex
                     </div>
-                    <div className="flex items-center justify-end mt-8">
+                    <div className="flex items-center justify-end mt-8 mr-4">
                       <div className="w-[34px] h-[34px] rounded-[50%] border border-[rgba(234, 236, 240, 1)] mr-2 sm:flex"></div>{" "}
                       <Dropdown2 />
                     </div>

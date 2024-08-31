@@ -5,7 +5,7 @@ import DropdownNotification from "../dropdownnotification";
 import DashboardNav from "./mobile_navbar";
 
 const Nav = () => {
-  const [showNav, setShowNav]: any = useState(true);
+  const [showNav, setShowNav]: any = useState(false);
   return (
     <div className="border">
       <div className="flex justify-between text-[16px] bg-white items-center sm:w-[90%] w-full m-auto py-9 ">

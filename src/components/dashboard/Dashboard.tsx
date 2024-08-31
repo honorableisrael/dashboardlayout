@@ -11,7 +11,7 @@ const Dashboard = () => {
       <div className="bg-[#F9FAFB]">
         <div className="sm:w-[90%] w-full m-auto pb-8 sm:py-8">
           <div className="block sm:hidden bg-[#EEF4FF] p-5 px-2 mb-8">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center min-w-[fit-content] flex-wrap">
               <svg
                 width="16"
                 height="16"
@@ -30,8 +30,8 @@ const Dashboard = () => {
               </svg>
              {' '} Your account isn’t fully activated.
             </div>
-            <div className="flex justify-center">
-              <span className=" text-[#2C53F2] mr-1">Complete registration</span> to access all
+            <div className="flex justify-center min-w-[fit-content]">
+              <span className=" text-[#2C53F2] mr-1 min-w-[fit-content]">Complete registration</span> to access all
               benefits.
             </div>
           </div>
@@ -71,7 +71,7 @@ const Dashboard = () => {
             </span>
           </div>
           <div className="flex justify-between">
-            <div className="flex items-center mt-2 text-[#667085] p-[1rem] py-0 sm:py-[1rem] sm:p-0">
+            <div className="flex items-center text-[#667085] p-[1rem] py-0 sm:py-[1rem] !pt-0 sm:p-0">
               Overview of your activity in{" "}
               <span className="ml-2 ">
                 <svg
@@ -120,7 +120,7 @@ const Dashboard = () => {
                 </svg>
               </span>
             </div>
-            <div className="text-[14px] hidden sm:flex">
+            <div className="text-[14px] hidden sm:flex sm:flex-nowrap flex-wrap">
               <button className="w-[153px] h-[40px] mr-2 border-none text-[#5E01D6] bg-[#D7CEFB] flex items-center px-5 rounded-[6px] font-semibold">
                 <svg
                   width="20"
@@ -138,14 +138,14 @@ const Dashboard = () => {
                     fill="#5E01D6"
                   />
                 </svg>
-                <span className="ml-2">Send money</span>
+                <span className="ml-2 min-w-[fit-content]">Send money</span>
               </button>
               <Dropdown />
             </div>
           </div>
-          <div className="flex justify-between sm:mt-10 mt-[1.7rem] custom-scrollbar">
+          <div className="flex justify-between sm:mt-3 mt-[1.7rem] custom-scrollbar">
             <div className=" min-w-[321px] md:min-w-[24%]  sm:p-7 p-4 border border-[#F4F0FF] bg-white rounded-[10px] mr-4">
-              <div className="font-semibold">Active orders</div>
+              <div className="">Active orders</div>
               <div className="text-[32px] mt-2">
                 <span className="text-[#667085] text-[24px] mr-1">₦</span>
                 4,350,000
@@ -191,7 +191,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="min-w-[321px] md:min-w-[24%]  sm:p-7 p-4 border border-[#F4F0FF] bg-white mr-4 rounded-[10px]">
-              <div className="font-semibold">Your balance</div>
+              <div className="">Your balance</div>
               <div className="text-[32px] mt-2">7</div>
               <div className="flex items-center justify-between mt-2 text-[16px]">
                 <div className="flex items-center">
@@ -232,7 +232,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="  min-w-[321px] md:min-w-[24%]  sm:p-7 p-4 border border-[#F4F0FF] bg-white rounded-[10px]">
-              <div className="font-semibold">Active loans</div>
+              <div className="">Active loans</div>
               <div className="text-[32px] mt-2">7</div>
               <div className="flex items-center space-between mt-2 text-[16px]">
                 <div className="flex items-center">
@@ -243,10 +243,10 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="  min-w-[321px] md:min-w-[24%] mr-5 sm:mr-0  sm:p-7 p-4 border ml-4 border-[#F4F0FF] bg-white rounded-[10px]">
-              <div className="flex justify-between font-semibold">
+              <div className="flex justify-between">
                 Unpaid invoices{" "}
                 <span className="flex items-center">
-                  <span className="mr-1 text-[#344054] font-[500]">
+                  <span className="mr-1 text-[#344054] font-[400]">
                     All time{" "}
                   </span>
                   <svg
@@ -270,7 +270,7 @@ const Dashboard = () => {
               <div className="flex items-center space-between mt-2 text-[16px]">
                 <div className="flex items-center">
                   <div className="flex items-center">
-                    <span className="mr-1 font-medium">₦ 720,000.00</span>{" "}
+                    <span className="mr-1">₦ 720,000.00</span>{" "}
                     <span className="text-[14px] ml-2">overdue</span>
                   </div>
                 </div>
@@ -278,8 +278,8 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="flex text-[14px] sm:hidden mt-[.5rem] sm:mt-6 p-[1rem] sm:p-0 sm:justify-start justify-center">
-            <button className="w-[153px] h-[40px] mr-2 border-none text-[#5E01D6] bg-[#D7CEFB] flex items-center px-5 rounded-[6px] font-semibold">
+          <div className="flex text-[14px] sm:hidden mt-[.5rem] sm:mt-6 p-[1rem] sm:p-0 sm:justify-start justify-center ">
+            <button className="w-[153px] h-[40px] mr-2 border-none text-[#5E01D6] hover:bg-[#D7CEFB] bg-[#D7CEFB] flex items-center px-5 rounded-[6px] font-semibold">
               <svg
                 width="20"
                 height="20"
@@ -304,9 +304,9 @@ const Dashboard = () => {
           {/* Recent transaction and pending transaction */}
           <div className="flex flex-wrap justify-between mt-5 mb-3 sm:flex-nowrap sm:mb-0">
             <div className="w-[49%] min-w-full sm:p-8 p-4 sm:min-w-[49%]  p-[1rem] pt-6 sm:pt-10  border-[.5] border-[#E7E9FB] rounded-[15px] bg-white">
-              <div className="flex justify-between font-semibold">
+              <div className="flex justify-between font-medium">
                 <span className="text-[#667085]">Recent transactions</span>{" "}
-                <span className="bg-[#F2F4F7] leading-[20px] text-[#344054] px-4 py-2 flex items-center rounded-[5px] font-semibold">
+                <span className="bg-[#F2F4F7] leading-[20px] text-[#344054] px-4 py-2 flex items-center rounded-[5px]">
                   <span className="flex mr-1">
                     Print{" "}
                     <span className="hidden ml-1 sm:block">statement</span>{" "}
@@ -337,7 +337,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <div className="text-[14px]">
-                    <div className="text-[#101828] font-bold ">
+                    <div className="text-[#101828] font-medium ">
                       To Emina Odette
                     </div>
                     <div className="text-[#475467]">
@@ -367,7 +367,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <div className="text-[14px]">
-                    <div className="text-[#101828] font-bold ">
+                    <div className="text-[#101828] font-medium ">
                       To Emina Odette
                     </div>
                     <div className="text-[#475467]">
@@ -397,7 +397,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center justify-between mt-2">
                   <div className="text-[14px]">
-                    <div className="text-[#101828] font-bold ">
+                    <div className="text-[#101828] font-medium ">
                       To Bass Industries
                     </div>
                     <div className="text-[#475467]">
@@ -424,7 +424,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center justify-between mt-4">
                   <div className="text-[14px]">
-                    <div className="text-[#101828] font-bold ">
+                    <div className="text-[#101828] font-medium ">
                       From S&B Incorporated
                     </div>
                     <div className="text-[#475467]">7:18 AM</div>
@@ -445,7 +445,7 @@ const Dashboard = () => {
                 </div>
                 <div className="flex items-center justify-between mt-4">
                   <div className="text-[14px]">
-                    <div className="text-[#101828] font-bold ">
+                    <div className="text-[#101828] font-medium ">
                       To Humphrey & Co.
                     </div>
                     <div className="text-[#475467]">
@@ -522,7 +522,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="">
-                    <div className="font-[600] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
+                    <div className="font-[500] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
                       Review offer
                     </div>
                   </div>
@@ -550,7 +550,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="">
-                    <div className="font-[600] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
+                    <div className="font-[500] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
                       Review offer
                     </div>
                   </div>
@@ -578,7 +578,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="">
-                    <div className="font-[600] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
+                    <div className="font-[500] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
                       Review shipment
                     </div>
                   </div>
@@ -603,7 +603,7 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="">
-                    <div className="font-[600] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
+                    <div className="font-[500] text-[#7D14FF] text-[14px] mt-2 sm:mt-0">
                       Make payment
                     </div>
                   </div>
