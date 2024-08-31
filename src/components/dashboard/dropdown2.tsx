@@ -18,8 +18,8 @@ function Dropdown2() {
     }
     return (
       <div
-        id="dropdown1"
-        className="absolute mt-2 bg-white  divide-y  rounded-[8px] divide-gray-100 rounded-lg shadow z-15 w-44 right-[5rem] sm:right-[15.8rem]"
+        id="dropdown2"
+        className="absolute mt-2 bg-white  divide-y  rounded-[8px] divide-gray-100 shadow z-15 w-44 right-1 sm:right-[15.8rem]"
       >
         <ul
           className="py-2 text-sm text-[#101828] rounded-[8px] w-[253px] bg-white"
@@ -150,7 +150,7 @@ function Dropdown2() {
       </span>
       {isOpen && (
         <div
-          id="dropdown"
+          id="dropdown1"
           className="absolute z-10 mt-2 border border-[#E7E9FB] bg-white divide-y rounded-[10px] divide-gray-100 rounded-lg shadow w-44"
         >
           <ul

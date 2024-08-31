@@ -36,6 +36,9 @@ code {
   #dropdown1{
     right: 5rem;
   }
+  #dropdown2{
+    right: 8rem;
+  }
 }
 @media(min-width:700px){
   .custom-scrollbar{

@@ -26,8 +26,8 @@ const DashboardNav = ({ showNav, setShowNav }: DashboardNavProps) => {
         )}
         <SideNav
           showNav={showNav}
-          style={{ background: showNav ? "rgba(251, 251, 251, 1)" : "none" }}
-          navStyle={{ width: "100%", background: "rgba(251, 251, 251, 1)" }}
+          style={{ background: showNav ? "rgba(251, 251, 251, 1)" : "none",zIndex:'2000' }}
+          navStyle={{ width: "100%", background: "rgba(251, 251, 251, 1)",overflow:'scroll' }}
           onHideNav={() => setShowNav(false)}
           titleStyle={{
             backgroundColor: "#fff",

@@ -242,7 +242,7 @@ const Dashboard = () => {
                 <div className=""></div>
               </div>
             </div>
-            <div className="  min-w-[321px] md:min-w-[24%]  sm:p-7 p-4 border ml-4 border-[#F4F0FF] bg-white rounded-[10px]">
+            <div className="  min-w-[321px] md:min-w-[24%] mr-5 sm:mr-0  sm:p-7 p-4 border ml-4 border-[#F4F0FF] bg-white rounded-[10px]">
               <div className="flex justify-between font-semibold">
                 Unpaid invoices{" "}
                 <span className="flex items-center">
