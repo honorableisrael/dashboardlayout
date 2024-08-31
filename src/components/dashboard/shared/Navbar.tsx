@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../assets/Tradevu Logo.svg";
 import Dropdown2 from "../dropdown2";
 import DropdownNotification from "../dropdownnotification";
+import DashboardNav from "./mobile_navbar";
 
 const Nav = () => {
+  const [showNav, setShowNav]: any = useState(true);
   return (
     <div className="border">
       <div className="flex justify-between text-[16px] bg-white items-center sm:w-[90%] w-full m-auto py-9 ">
@@ -11,7 +13,10 @@ const Nav = () => {
           <img src={logo} alt="logo" />
           <span className="flex items-center">
             <DropdownNotification />
-            <span className="block ml-2 sm:hidden">
+            <span
+              className="block ml-2 sm:hidden"
+              onClick={() => setShowNav(true)}
+            >
               <svg
                 width="32"
                 height="32"
@@ -73,6 +78,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
+      <DashboardNav showNav={showNav} setShowNav={setShowNav} />
     </div>
   );
 };

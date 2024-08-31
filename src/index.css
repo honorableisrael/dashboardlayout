@@ -33,9 +33,13 @@ code {
     overflow-x: scroll;
     padding-left: .8rem;
   }
+  #dropdown1{
+    right: 5rem;
+  }
 }
 @media(min-width:700px){
   .custom-scrollbar{
     overflow-x: initial;
   }
+
 }

@@ -18,8 +18,8 @@ function Dropdown2() {
     }
     return (
       <div
-        id="dropdown"
-        className="absolute mt-2 bg-white  divide-y sm:right-[15.8rem] rounded-[8px] divide-gray-100 rounded-lg shadow z-15 w-44 right-[3rem]"
+        id="dropdown1"
+        className="absolute mt-2 bg-white  divide-y  rounded-[8px] divide-gray-100 rounded-lg shadow z-15 w-44 right-[5rem] sm:right-[15.8rem]"
       >
         <ul
           className="py-2 text-sm text-[#101828] rounded-[8px] w-[253px] bg-white"
