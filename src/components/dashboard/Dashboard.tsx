@@ -508,7 +508,7 @@ const Dashboard = () => {
                   <hr className="w-full " />
                 </div>
                 <div className="flex flex-wrap items-center justify-between mt-2 sm:flex-nowrap">
-                  <div className="text-[14px]">
+                  <div className="text-[14px] w-full sm:w-[fit-content]">
                     <div className="text-[#101828] font-[400] ">
                       You’ve received an offer of{" "}
                       <span className="font-[500]">₦ 3,000,000</span>
@@ -536,7 +536,7 @@ const Dashboard = () => {
                   <hr className="w-full " />
                 </div>
                 <div className="flex flex-wrap items-center justify-between mt-2 sm:flex-nowrap">
-                  <div className="text-[14px]">
+                  <div className="text-[14px] w-full sm:w-[fit-content]">
                     <div className="text-[#101828] font-[400] ">
                       You’ve received an offer of{" "}
                       <span className="font-[500]">₦ 3,000,000</span>
@@ -564,7 +564,7 @@ const Dashboard = () => {
                   <hr className="w-full " />
                 </div>
                 <div className="flex flex-wrap items-center justify-between mt-2 sm:flex-nowrap">
-                  <div className="text-[14px]">
+                  <div className="text-[14px] w-full sm:w-[fit-content]">
                     <div className="text-[#101828] font-[400] ">
                       You’ve received an offer of{" "}
                       <span className="font-[500]">₦ 3,000,000</span>
@@ -589,7 +589,7 @@ const Dashboard = () => {
                   <hr className="w-full " />
                 </div>
                 <div className="flex flex-wrap items-center justify-between mt-4 sm:flex-nowrap">
-                  <div className="text-[14px]">
+                  <div className="text-[14px] w-full sm:w-[fit-content]">
                     <div className="text-[#101828] font-[400] ">
                       You’ve received an offer of{" "}
                       <span className="font-[500]">₦ 3,000,000</span>

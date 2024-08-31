@@ -34,7 +34,7 @@ const DashboardNav = ({ showNav, setShowNav }: DashboardNavProps) => {
             color: "#444444",
             paddingLeft: 8,
             paddingRight: 0,
-            marginLeft: 8,
+            marginLeft: 10,
             paddingBottom: 0,
             paddingTop: 0,
             fontSize: 17,

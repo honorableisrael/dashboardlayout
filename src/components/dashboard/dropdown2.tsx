@@ -169,7 +169,7 @@ function Dropdown2() {
             <div
               ref={nodeRef}
               id="dropdown1"
-              className="absolute z-10 mt-2 border border-[#E7E9FB] bg-white divide-y rounded-[10px] divide-gray-100 rounded-lg shadow w-44"
+              className="absolute z-10 mt-2 border border-[#E7E9FB] bg-white divide-y rounded-[10px] divide-gray-100 rounded-lg shadow w-44 z-[150]"
             >
               <ul
                 className="py-2 text-sm text-[#101828] w-[233px] bg-white"
